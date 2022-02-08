@@ -55,7 +55,6 @@ namespace RawFeeder
             { 1, (3,5) },
             { 11, (3, 5) }
         };
-
         
         public static void Main(string[] args)
         {
@@ -159,18 +158,18 @@ namespace RawFeeder
             var offalEntered = false;
 
             if (bone == null)
-                bone = CompleteList[new Random().Next(0, CompleteList.Count - 1)];
+                bone = GetRandom(CompleteList);
             else
                 boneEntered = true;
 
             if (meat == null)
-                meat = MeatList[new Random().Next(0, MeatList.Count - 1)];
+                meat = GetRandom(MeatList);
             else
                 meatEntered = true;
 
             var nonLiver = OffalList.Where(x => !x.Name.Contains("Liver")).ToList();
             if (offal == null)
-                offal = nonLiver[new Random().Next(0, nonLiver.Count - 1)];
+                offal = GetRandom(nonLiver);
             else
                 offalEntered = true;
 
@@ -266,6 +265,8 @@ namespace RawFeeder
                 }
             }
         }
+
+        public static T GetRandom<T>(IList<T> list) => list[new Random().Next(0, list.Count - 1)];
     }
 
     public class EightyTenTen : Meal
