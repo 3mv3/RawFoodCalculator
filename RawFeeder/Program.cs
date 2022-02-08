@@ -9,8 +9,7 @@ namespace RawFeeder
     {
         public static List<Meat> MeatList = new List<Meat>
         {
-            new Meat("Venison Mince"){ CostPerGram = .65m },
-            new Meat("Duck Carcass Mince") { Brand = "TBD", CostPerGram = 290m/100, BoneContentPercentage = 50 },
+            new Meat("Venison Mince") { CostPerGram = .65m },
             new Meat("Goat Chunks") { Brand = "PRTC", CostPerGram = 1200m/1000 },
             new Meat("Lamb") { CostPerGram = .23m },
             new Meat("Venison Chunks") { Brand = "NTN", CostPerGram = 750m/1000 },
@@ -28,17 +27,18 @@ namespace RawFeeder
             new Meat("White Fish Chunks") { Brand = "PRTC", CostPerGram = 350m/1000 }
         };
 
-        public static List<Bone> BoneList = new List<Bone>
+        public static List<Complete> CompleteList = new List<Complete>
         {
-            new Bone("Chicken Drumstick", 30) { CostPerGram = 350m/1000 },
-            new Bone("Duck Neck", 50) { Brand = "TBD", CostPerGram = 390m/1000 },
-            new Bone("Duck Leg", 35) { CostPerGram = .32m },
-            new Bone("Duck Wing", 40) { Brand = "TBD", CostPerGram = 350m/1000 },
-            new Bone("Veal Rib", 35) { CostPerGram = 350m/1000 },
-            new Bone("Whole Quail", 10) { CostPerGram = 390m/200 },
-            new Bone("Duck Feet", 60) { Brand = "PR", CostPerGram = 385m/600 },
-            new Bone("Whole Duck", 30) { Brand = "PRTC", CostPerGram = 340m/1200 },
-            new Bone("Goose Neck", 50) { Brand = "PRTC", CostPerGram = 360m/1000 }
+            new Complete("Chicken Drumstick", 30, 0) { CostPerGram = 350m/1000 },
+            new Complete("Duck Neck", 50, 0) { Brand = "TBD", CostPerGram = 390m/1000 },
+            new Complete("Duck Leg", 35, 0) { CostPerGram = .32m },
+            new Complete("Duck Wing", 40, 0) { Brand = "TBD", CostPerGram = 350m/1000 },
+            new Complete("Veal Rib", 35, 0) { CostPerGram = 350m/1000 },
+            new Complete("Whole Quail", 10, 0) { CostPerGram = 390m/200 },
+            new Complete("Duck Feet", 60, 0) { Brand = "PR", CostPerGram = 385m/600 },
+            new Complete("Whole Duck", 30, 0) { Brand = "PRTC", CostPerGram = 340m/1200 },
+            new Complete("Goose Neck", 50, 0) { Brand = "PRTC", CostPerGram = 360m/1000 },
+            new Complete("Duck Carcass Mince", 50, 0) { Brand = "TBD", CostPerGram = 290m/100 }
         };
 
         public static List<Offal> OffalList = new List<Offal>
@@ -82,7 +82,7 @@ namespace RawFeeder
 
             if(ownIngredients)
             {
-                Console.WriteLine("Enter meat");
+                Console.WriteLine("Enter meat (zero bone content)");
                 userInput = Console.ReadLine();
                 currentMeat = MeatList.FirstOrDefault(x => x.Name.Equals(userInput, StringComparison.InvariantCultureIgnoreCase));
 
@@ -96,9 +96,9 @@ namespace RawFeeder
                     Console.WriteLine("Meat information not found, using random meat.");
                 }
 
-                Console.WriteLine("Enter bone");
+                Console.WriteLine("Enter bone / complete meal");
                 userInput = Console.ReadLine();
-                currentBone = BoneList.FirstOrDefault(x => x.Name.Equals(userInput, StringComparison.InvariantCultureIgnoreCase));
+                currentBone = CompleteList.FirstOrDefault(x => x.Name.Equals(userInput, StringComparison.InvariantCultureIgnoreCase));
 
                 if (currentBone != null)
                 {
@@ -158,7 +158,7 @@ namespace RawFeeder
             var offalEntered = false;
 
             if (bone == null)
-                bone = BoneList[new Random().Next(0, BoneList.Count - 1)];
+                bone = CompleteList[new Random().Next(0, CompleteList.Count - 1)];
             else
                 boneEntered = true;
 
@@ -178,19 +178,19 @@ namespace RawFeeder
             // 80/.4 = x
 
             // E.g If using a complete mince
-            if (meat.BoneContentPercentage > 0)
-            {
-                // If user entered
-                if (meatEntered && meat.WeightInGrams < meatToEatLower)
-                {
-                    // We need to lower the required bone to eat if the meat is already high in bone
-                    boneToEatLower -= (int)decimal.Round(meat.WeightInGrams * (meat.BoneContentPercentage / 100), 0);
-                }
-                else
-                {
-                    boneToEatLower -= (int)decimal.Round(meatToEatLower * (meat.BoneContentPercentage / 100), 0);
-                }
-            }
+            //if (meat.BoneContentPercentage > 0)
+            //{
+            //    // If user entered
+            //    if (meatEntered && meat.WeightInGrams < meatToEatLower)
+            //    {
+            //        // We need to lower the required bone to eat if the meat is already high in bone
+            //        boneToEatLower -= (int)decimal.Round(meat.WeightInGrams * (meat.BoneContentPercentage / 100), 0);
+            //    }
+            //    else
+            //    {
+            //        boneToEatLower -= (int)decimal.Round(meatToEatLower * (meat.BoneContentPercentage / 100), 0);
+            //    }
+            //}
 
             var lowerMeatGramsIncludingBone = decimal.Round(boneToEatLower / (bone.BoneContentPercentage / 100), 0);
             var upperMeatGramsIncludingBone = decimal.Round(boneToEatUpper / (bone.BoneContentPercentage / 100), 0);
@@ -221,8 +221,8 @@ namespace RawFeeder
             if (boneEntered && bone.BoneContentGrams < boneToEatLower)
             {
                 // Extra bone needed
-                var extraBone = BoneList.Where(x => x.Name != bone.Name)
-                    .ToList()[new Random().Next(0, BoneList.Count - 2)];
+                var extraBone = CompleteList.Where(x => x.Name != bone.Name)
+                    .ToList()[new Random().Next(0, CompleteList.Count - 2)];
 
                 var remaining = boneToEatLower - bone.BoneContentGrams;
                 var remainingMeatGramsIncludingBone = decimal.Round(remaining / (extraBone.BoneContentPercentage / 100), 0);
@@ -294,27 +294,7 @@ namespace RawFeeder
         {
             BoneContentPercentage = bonePercentage;
         }
-    }
 
-    public class Offal : Meat
-    {
-        public Offal(string name) : base(name)
-        {
-
-        }
-    }
-
-    public class Meat
-    {
-        public Meat(string name)
-        {
-            Name = name;
-        }
-
-        public string Brand { get; set; }
-        public string Name { get; set; }
-        public decimal CostPerGram { get; set; }
-        public decimal WeightInGrams { get; set; }
         private decimal _boneContentGrams { get; set; }
         public decimal BoneContentGrams
         {
@@ -325,7 +305,7 @@ namespace RawFeeder
                 else
                     return _boneContentGrams;
             }
-            set => _boneContentGrams = value;   
+            set => _boneContentGrams = value;
         }
         public decimal BoneContentPercentage { get; set; }
 
@@ -343,5 +323,43 @@ namespace RawFeeder
         }
 
         public decimal MeatContentPercentage => 100 - BoneContentPercentage;
+    }
+
+    public class Offal : Meat
+    {
+        public Offal(string name) : base(name){ }
+    }
+
+    public class Complete : Bone
+    {
+        public Complete(string name, int bonePercentage, int offalPercentage) : base(name, bonePercentage)
+        {
+            OffaContentPercentage = offalPercentage;
+        }
+
+        private decimal _offalContentGrams { get; set; }
+        public decimal OffalContentGrams
+        {
+            get
+            {
+                if (OffaContentPercentage > 0 && WeightInGrams > 0)
+                    return WeightInGrams * (OffaContentPercentage / 100);
+                else
+                    return _offalContentGrams;
+            }
+            set => _offalContentGrams = value;
+        }
+
+        public decimal OffaContentPercentage { get; set; }
+    }
+
+    public class Meat
+    {
+        public Meat(string name) => Name = name;
+
+        public string Brand { get; set; }
+        public string Name { get; set; }
+        public decimal CostPerGram { get; set; }
+        public decimal WeightInGrams { get; set; }
     }
 }
