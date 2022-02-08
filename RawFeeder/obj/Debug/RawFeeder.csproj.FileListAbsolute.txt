@@ -1,0 +1,6 @@
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/bin/Debug/RawFeeder.exe
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/bin/Debug/RawFeeder.pdb
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/obj/Debug/RawFeeder.csproj.AssemblyReference.cache
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/obj/Debug/RawFeeder.csproj.CoreCompileInputs.cache
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/obj/Debug/RawFeeder.exe
+/Users/matthewvarley/Projects/RawFeeder/RawFeeder/obj/Debug/RawFeeder.pdb
