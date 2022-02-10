@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{FF87BB7A-E0AB-4946-9509-03725622F672}|Default">
+  <MonoDevelop.Ide.ItemProperties.RawFeederApp.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RawFeederApp/FoodEntry.xaml">
+    <Files>
+      <File FileName="RawFeederApp/MainPage.xaml" Line="11" Column="17" />
+      <File FileName="RawFeederApp/RawFeederModel.cs" Line="34" Column="10" />
+      <File FileName="RawFeederApp/MainPage.xaml.cs" Line="12" Column="10" />
+      <File FileName="RawFeederApp/FoodEntry.xaml" Line="14" Column="21" />
+      <File FileName="RawFeederApp/FoodEntry.xaml.cs" Line="18" Column="10" />
+      <File FileName="RawFeederApp/Calculate.xaml.cs" Line="11" Column="1" />
+      <File FileName="RawFeederApp/Calculate.xaml" Line="11" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RawFeederApp" expanded="True">
+            <Node name="RawFeederApp" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="Calculate.xaml" expanded="True" />
+              <Node name="FoodEntry.xaml" expanded="True" selected="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="RawFeederApp.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.RawFeederApp.iOS FirstBuild="True" />
+</Properties>

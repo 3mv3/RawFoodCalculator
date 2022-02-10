@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:RawFeederApp.ViewModels"
+             x:Class="RawFeederApp.MainPage"
+             x:DataType="ViewModels:RawFeederModel">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Raw Food Calculator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Entry Keyboard="Numeric"
+               Placeholder="Enter your dogs age"
+               Text="{Binding Age}" />
+
+        <Entry Keyboard="Numeric"
+               Placeholder="Enter your dogs current weight in grams"
+               Text="{Binding Weight}" />
+
+        <Button Text="Submit" Clicked="Button_Clicked"> </Button>
+
+    </StackLayout>
+
+</ContentPage>

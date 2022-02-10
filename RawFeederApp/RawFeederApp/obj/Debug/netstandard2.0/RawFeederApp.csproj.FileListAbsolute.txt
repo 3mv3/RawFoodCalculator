@@ -1,0 +1,17 @@
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/bin/Debug/netstandard2.0/RawFeederApp.deps.json
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/bin/Debug/netstandard2.0/RawFeederApp.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/bin/Debug/netstandard2.0/ref/RawFeederApp.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/bin/Debug/netstandard2.0/RawFeederApp.pdb
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.csproj.AssemblyReference.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.AssemblyInfoInputs.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.AssemblyInfo.cs
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.csproj.CoreCompileInputs.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/ref/RawFeederApp.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/RawFeederApp.pdb
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/FoodEntry.xaml.g.cs
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederApp/RawFeederApp/obj/Debug/netstandard2.0/Calculate.xaml.g.cs
