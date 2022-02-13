@@ -1,24 +1,27 @@
 ﻿<Properties StartupConfiguration="{FF87BB7A-E0AB-4946-9509-03725622F672}|Default">
   <MonoDevelop.Ide.ItemProperties.RawFeederApp.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RawFeederApp/FoodEntry.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RawFeederApp/FoodEntry.xaml.cs">
     <Files>
       <File FileName="RawFeederApp/MainPage.xaml" Line="11" Column="17" />
-      <File FileName="RawFeederApp/RawFeederModel.cs" Line="34" Column="10" />
-      <File FileName="RawFeederApp/MainPage.xaml.cs" Line="12" Column="10" />
+      <File FileName="RawFeederApp/RawFeederModel.cs" Line="19" Column="1" />
+      <File FileName="RawFeederApp/MainPage.xaml.cs" Line="19" Column="10" />
       <File FileName="RawFeederApp/FoodEntry.xaml" Line="14" Column="21" />
       <File FileName="RawFeederApp/FoodEntry.xaml.cs" Line="18" Column="10" />
-      <File FileName="RawFeederApp/Calculate.xaml.cs" Line="11" Column="1" />
-      <File FileName="RawFeederApp/Calculate.xaml" Line="11" Column="27" />
+      <File FileName="RawFeederApp/Calculate.xaml.cs" Line="12" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RawFeederApp" expanded="True">
             <Node name="RawFeederApp" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="AssemblyDependencies" expanded="True" />
+              </Node>
               <Node name="App.xaml" expanded="True" />
               <Node name="Calculate.xaml" expanded="True" />
-              <Node name="FoodEntry.xaml" expanded="True" selected="True" />
+              <Node name="FoodEntry.xaml" expanded="True">
+                <Node name="FoodEntry.xaml.cs" selected="True" />
+              </Node>
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="RawFeederApp.Android" expanded="True" />

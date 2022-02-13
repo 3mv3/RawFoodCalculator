@@ -18,4 +18,9 @@
     <None Remove="RawFeederLib" />
     <None Remove="NETStandard.Library" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="RawFeederLib">
+      <HintPath>..\..\RawFeederLib\RawFeederLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
