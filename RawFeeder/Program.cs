@@ -336,7 +336,7 @@ namespace RawFeeder
     {
         public Complete(string name, int bonePercentage, int offalPercentage) : base(name, bonePercentage)
         {
-            OffaContentPercentage = offalPercentage;
+            OffalContentPercentage = offalPercentage;
         }
 
         private decimal _offalContentGrams { get; set; }
@@ -344,15 +344,15 @@ namespace RawFeeder
         {
             get
             {
-                if (OffaContentPercentage > 0 && WeightInGrams > 0)
-                    return WeightInGrams * (OffaContentPercentage / 100);
+                if (OffalContentPercentage > 0 && WeightInGrams > 0)
+                    return WeightInGrams * (OffalContentPercentage / 100);
                 else
                     return _offalContentGrams;
             }
             set => _offalContentGrams = value;
         }
 
-        public decimal OffaContentPercentage { get; set; }
+        public decimal OffalContentPercentage { get; set; }
     }
 
     public class Meat

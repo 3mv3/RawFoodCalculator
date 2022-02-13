@@ -1,0 +1,12 @@
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/bin/Debug/net5.0/RawFeederLib.deps.json
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/bin/Debug/net5.0/RawFeederLib.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/bin/Debug/net5.0/ref/RawFeederLib.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/bin/Debug/net5.0/RawFeederLib.pdb
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.csproj.AssemblyReference.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.AssemblyInfoInputs.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.AssemblyInfo.cs
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.csproj.CoreCompileInputs.cache
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/ref/RawFeederLib.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib5/obj/Debug/net5.0/RawFeederLib.pdb

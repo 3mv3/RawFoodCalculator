@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ViewModels="clr-namespace:RawFeederApp.ViewModels"
+    x:Class="RawFeederApp.FoodEntry"
+    x:DataType="ViewModels:RawFeederModel">
+
+    <ContentPage.Content>
+        <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Raw Food Calculator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Entry Keyboard="Text"
+                   Placeholder="Enter your meat"
+                   Text="{Binding CurrentMeat}"/>
+
+            <Entry Keyboard="Text"
+                    Placeholder="Enter your bone"
+                    Text="{Binding CurrentBone}"/>
+
+            <Entry Keyboard="Text"
+                   Placeholder="Enter your offal"
+                   Text="{Binding CurrentOffal}"/>
+
+            <Button Text="Submit"
+                   Clicked="Button_Pressed"></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

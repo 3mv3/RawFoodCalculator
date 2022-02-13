@@ -1,0 +1,3 @@
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib.dll
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib.deps.json
+/Users/matthewvarley/Dev/RawFoodCalculator/RawFeederLib/RawFeederLib.pdb
